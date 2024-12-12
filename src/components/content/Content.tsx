@@ -3,11 +3,12 @@ import "./content.scss";
 import colorImage from "../../assets/images/welcome-img.jpg";
 import TypingEffect from "../typing-effect/TypingEffect";
 import Skills from "../skills/Skills";
+import profile from '../../assets/images/man.jpg'
 
 const Content = () => {
   return (
     <div className="content-container">
-      <div className="welcome-container">
+      <div className="welcome-container" id='welcome'>
         <img src={colorImage} alt="colors" />
         <div className="welcome-text-container">
           <div className="welcome-header">
@@ -21,8 +22,11 @@ const Content = () => {
         </div>
       </div>
       
+        <div className="skills-description" >
+          <p>List of Skills</p>
+        </div>
         <Skills />
-      
+       
     </div>
   );
 };
