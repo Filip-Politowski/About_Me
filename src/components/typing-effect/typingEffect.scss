@@ -1,0 +1,13 @@
+.typing-effect {
+  font-size: 48px;
+  color: white;
+  text-align: left;
+  .cursor {
+    animation: blink 0.7s step-end infinite;
+  }
+  @keyframes blink {
+    50% {
+      display: none;
+    }
+  }
+}

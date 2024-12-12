@@ -4,16 +4,18 @@
   z-index: 10;
   background-color: #1a1818;
   display: flex;
-  padding: 0 2vw;
+  padding: 10px;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 
   .firstname-lastname {
     color: white;
+    margin-left: 15px;
   }
 
   .navigation-buttons {
-    margin-left: auto;
+    margin-right: 15px;
     gap: 30px;
     display: flex;
     flex-direction: row;
