@@ -1,0 +1,25 @@
+@import '../../assets/styles/globalColors.scss';
+.skills-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(43, 42, 42);
+    border-radius: 20px;
+    margin-top: 50px;
+
+    .skills-list{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        ul{
+            list-style: none;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+}

@@ -1,3 +1,4 @@
+@import '../../assets/styles/globalColors.scss';
 .content-container {
   background-color: black;
   width: 1200px;
@@ -19,7 +20,7 @@
           
         
       .welcome-text {
-        color: rgb(179, 179, 179);
+        color: $gray-text-color;
         word-wrap: break-word; /* Zawija długie słowa */
         overflow-wrap: anywhere; /* Dodatkowa kontrola dla zawijania w trudnych przypadkach */
         max-width: 100%; /* Zapobiega wychodzeniu poza rodzica */

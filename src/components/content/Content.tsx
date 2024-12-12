@@ -2,6 +2,7 @@ import React from "react";
 import "./content.scss";
 import colorImage from "../../assets/images/welcome-img.jpg";
 import TypingEffect from "../typing-effect/TypingEffect";
+import Skills from "../skills/Skills";
 
 const Content = () => {
   return (
@@ -19,6 +20,9 @@ const Content = () => {
           </div>
         </div>
       </div>
+      
+        <Skills />
+      
     </div>
   );
 };
