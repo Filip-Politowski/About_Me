@@ -8,7 +8,7 @@ type Projects = {
   description: string;
 };
 
-const projects: Projects[] = [
+const projectsList: Projects[] = [
   { id: 1, title: "Projekt 1", description: "Opis projektu 1" },
   { id: 2, title: "Projekt 2", description: "Opis projektu 2" },
   { id: 3, title: "Projekt 3", description: "Opis projektu 3" },
@@ -17,25 +17,11 @@ const projects: Projects[] = [
 ];
 
 const Projects: React.FC = () => {
-  // const [isMobile, setIsMobile] = useState<boolean>(false);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsMobile(window.innerWidth <= 768);
-  //   };
-
-  //   handleResize();
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
+ 
 
   return (
     <div className="grid-container">
-      {projects.map((project) => (
+      {projectsList.map((project) => (
         <div key={project.id} className="grid-item">
           <img src={java} alt="" />
           <div className="overlay">
