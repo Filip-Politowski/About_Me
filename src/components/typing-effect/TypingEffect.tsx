@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./typingEffect.scss";
 
 type TypingEffectProps = {
-  text1: string; 
+  text1: string;
   text2?: string;
-  typingSpeed?: number; 
-  eraseSpeed?: number; 
-  loop?: boolean; 
+  typingSpeed?: number;
+  eraseSpeed?: number;
+  loop?: boolean;
 };
 
 const TypingEffect: React.FC<TypingEffectProps> = ({
@@ -16,9 +16,9 @@ const TypingEffect: React.FC<TypingEffectProps> = ({
   eraseSpeed = 50,
   loop = false,
 }) => {
-  const [displayedText, setDisplayedText] = useState(""); 
-  const [isTyping, setIsTyping] = useState(true); 
-  const [index, setIndex] = useState(0); 
+  const [displayedText, setDisplayedText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+  const [index, setIndex] = useState(0);
   const [currentText, setCurrentText] = useState(text1);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const TypingEffect: React.FC<TypingEffectProps> = ({
           setIndex((prev) => prev + 1);
         }, typingSpeed);
       } else if (loop) {
-        setTimeout(() => setIsTyping(false), 3000); 
+        setTimeout(() => setIsTyping(false), 3000);
       }
     } else {
       // Usuwanie liter
@@ -43,14 +43,23 @@ const TypingEffect: React.FC<TypingEffectProps> = ({
           setIndex((prev) => prev - 1);
         }, eraseSpeed);
       } else if (loop) {
-        setTimeout(() => setIsTyping(true), 1000); 
-        setCurrentText((prev) => (prev === text1 ? text2 || text1 : text1)); 
+        setTimeout(() => setIsTyping(true), 1000);
+        setCurrentText((prev) => (prev === text1 ? text2 || text1 : text1));
         setIsTyping(true);
       }
     }
 
-    return () => clearTimeout(timeout); 
-  }, [index, isTyping, text1, typingSpeed, eraseSpeed, loop]);
+    return () => clearTimeout(timeout);
+  }, [
+    index,
+    isTyping,
+    text1,
+    text2,
+    currentText,
+    typingSpeed,
+    eraseSpeed,
+    loop,
+  ]);
 
   return (
     <div className="typing-effect">

@@ -1,6 +1,6 @@
 import React from "react";
 import "./content.scss";
-import colorImage from "../../assets/images/welcome-img.jpg";
+
 import TypingEffect from "../typing-effect/TypingEffect";
 import Skills from "../skills/Skills";
 import profile from '../../assets/images/man.jpg'

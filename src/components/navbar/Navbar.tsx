@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import "./navbar.scss";
 import Linkedinn from "../socialButtons/linkedin/Linkedinn";
 import Github from "../socialButtons/github/Github";
