@@ -16,7 +16,7 @@ const projectsList: Projects[] = [
   { id: 5, title: "Projekt 5", description: "Opis projektu 5" },
 ];
 
-const Projects: React.FC = () => {
+const ProjectsGrid: React.FC = () => {
  
 
   return (
@@ -34,4 +34,4 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects;
+export default ProjectsGrid;

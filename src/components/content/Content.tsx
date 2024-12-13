@@ -4,7 +4,7 @@ import "./content.scss";
 import TypingEffect from "../typing-effect/TypingEffect";
 import Skills from "../skills/Skills";
 import profile from '../../assets/images/filip.jpeg'
-import Projects from "../projects/Projects";
+import Projects from "../projects/ProjectsGrid";
 
 const Content: React.FC = () => {
   return (
