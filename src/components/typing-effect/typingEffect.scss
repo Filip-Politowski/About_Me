@@ -1,7 +1,9 @@
+@import '../../assets/styles/globalVariables.scss';
 .typing-effect {
   font-size: 48px;
   color: white;
   text-align: left;
+
   .cursor {
     animation: blink 0.7s step-end infinite;
   }
@@ -10,4 +12,12 @@
       display: none;
     }
   }
+@include xl{
+  font-size: 30px;
+}
+
+@include md{
+  font-size: 22px;
+}
+  
 }

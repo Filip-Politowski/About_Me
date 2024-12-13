@@ -32,8 +32,12 @@ const Skills = () => {
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 720 },
       items: 2,
+    },
+    mobileXl: {
+      breakpoint: { max: 720, min: 464 },
+      items: 1,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -47,71 +51,71 @@ const Skills = () => {
     <div className="skills-container" id='skills'>
       <div className="skills-list">
         <div className="skills-left">
-          <h1>Backend:</h1>
+          <p className="skills-header">Backend:</p>
           <ul>
             <li>
               <img src={java} alt="" />
-              Java
+              <p>Java</p>
             </li>
             <li>
               <img src={spring} alt="" />
-              Spring
+              <p>Spring</p>
             </li>
             <li>
-              <img src={hibernate} alt="" /> Hibernate
+              <img src={hibernate} alt="" /> <p>Hibernate</p> 
             </li>
             <li>
-              <img src={rest} alt="" /> REST API
+              <img src={rest} alt="" /> <p>REST API</p>
             </li>
             <li>
-              <img src={thymleaf} alt="" /> Thymleaf
+              <img src={thymleaf} alt="" /> <p>Thymleaf</p>
             </li>
             <li>
-              <img src={intellij} alt="" /> IntelliJ
+              <img src={intellij} alt="" /> <p>IntelliJ</p>
             </li>
             <li>
-              <img src={junit} alt="" /> JUnit
+              <img src={junit} alt="" /> <p>JUnit</p>
             </li>
             <li>
-              <img src={mysql} alt="" /> MySQL
+              <img src={mysql} alt="" /><p>MySQL</p> 
             </li>
             <li>
-              <img src={postgresql} alt="" /> Postgres
+              <img src={postgresql} alt="" /> <p>Postgres</p>
             </li>
             <li>
-              <img src={docker} alt="" /> Docker
+              <img src={docker} alt="" /> <p>Docker</p>
             </li>
             <li>
-              <img src={git} alt="" /> Git
+              <img src={git} alt="" /><p>Git</p>
             </li>
           </ul>
         </div>
         <div className="skills-right">
-          <h1>Front-end:</h1>
+          <p className="skills-header">Front-end:</p>
           <ul>
             <li>
-              <img src={react} alt="" /> React
+              <img src={react} alt="" /> <p>React</p>
             </li>
             <li>
-              <img src={html} alt="" /> HTML
+              <img src={html} alt="" /> <p>HTML</p>
             </li>
             <li>
-              <img src={css} alt="" /> CSS
+              <img src={css} alt="" /> <p>CSS</p>
             </li>
             <li>
-              <img src={javascript} alt="" /> JavaScript
+              <img src={javascript} alt="" /> <p>JavaScript</p>
             </li>
             <li>
-              <img src={typescript} alt="" /> TypedScript
+              <img src={typescript} alt="" /> <p>TypedScript</p>
             </li>
             <li>
-              <img src={vscode} alt="" /> VS Code
+              <img src={vscode} alt="" /> <p>VS Code</p>
             </li>
           </ul>
         </div>
       </div>
       <div className="additional-skills-description">
-        <h1>Additional Skills</h1>
+        <p>Additional Skills</p>
 
       </div>
       <div className="additional-skills">

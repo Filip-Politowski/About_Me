@@ -9,7 +9,7 @@ const Content = () => {
   return (
     <div className="content-container">
       <div className="welcome-container" id='welcome'>
-        <img src={colorImage} alt="colors" />
+        <img src={profile} alt="colors" />
         <div className="welcome-text-container">
           <div className="welcome-header">
             <TypingEffect text1="Hi I'm Filip Politowski" text2="And I am currently looking for new job opportunities" eraseSpeed={40} typingSpeed={70} loop={true} />
