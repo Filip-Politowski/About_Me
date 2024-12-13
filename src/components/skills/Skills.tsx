@@ -119,7 +119,7 @@ const Skills = () => {
 
       </div>
       <div className="additional-skills">
-        <Carousel responsive={responsive} infinite={true}>
+        <Carousel responsive={responsive} infinite={true} showDots={true}>
           <div className="item">
             <h5>Windows/Linux</h5>
           </div>
