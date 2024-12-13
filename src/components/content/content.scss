@@ -52,6 +52,9 @@
   .skills-description {
     font-family: "Courier New", Courier, monospace;
     font-size: 42px;
+    @include md{
+          font-size: 22px;
+        }
   }
 
   @include xl {
@@ -61,8 +64,6 @@
     height:40%;
     width: 40%;
   }
-  .skills-container{
-    // display: none;
-  }
+   
   }
 }
