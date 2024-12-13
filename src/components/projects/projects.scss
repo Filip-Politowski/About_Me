@@ -1,59 +1,106 @@
-@import '../../assets/styles/globalVariables.scss';
-
-.grid-container {
-  display: flex;
-  flex-wrap: wrap; 
-  gap: 16px; 
-  padding: 16px;
-  
-  @include xl{
-    justify-content: center;
-  }
-  
-}
-
-.grid-item {
-  flex: 1  calc(25% - 16px); 
-  max-width: calc(25% - 16px);
-  min-width: 250px; 
-  position: relative;
-  background-color: $navbar-color;
-  height: 200px;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  img{
-    width: 60px;
-    height: 60px;
-  }
-
-}
-
-.grid-item:hover {
-  transform: scale(1.05);
-}
-
-.overlay {
-  position: absolute;
-  top: 100%;  
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+@import "../../assets/styles/globalVariables.scss";
+.projects-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  text-align: center;
+  width: 100%;
+  align-items: center;
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
 
-  transition: top 0.3s ease;
-  
-}
+    @include xl {
+      justify-content: center;
+    }
+  }
 
-.grid-item:hover .overlay {
-  top: 0; 
+  .grid-item {
+    flex: 1 calc(25% - 16px);
+    max-width: calc(25% - 16px);
+    min-width: 250px;
+    position: relative;
+    background-color: $navbar-color;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+    @include lg {
+      flex: none;
+      max-width: none;
+      width: 300px;
+      height: 150px;
+    }
+  }
+
+  .grid-item:hover {
+    transform: scale(1.05);
+  }
+
+  .overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    transition: top 0.3s ease;
+  }
+
+  .grid-item:hover .overlay {
+    top: 0;
+  }
+
+  .project-carousel {
+    width: 80%;
+    gap: 20px;
+    position: relative;
+
+    .react-multi-carousel-list {
+      height: 190px;
+      margin-bottom: 20px;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .react-multiple-carousel__arrow--left {
+      left: 0;
+      z-index: 5;
+      @include md {
+        display: none;
+      }
+    }
+
+    .react-multiple-carousel__arrow--right {
+      right: 0;
+      z-index: 5;
+      @include md {
+        display: none;
+      }
+    }
+    .react-multi-carousel-dot-list {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+  }
 }

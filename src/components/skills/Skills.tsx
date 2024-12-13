@@ -20,7 +20,7 @@ import thymleaf from "../../assets/images/thymeleaf.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const Skills = () => {
+const Skills: React.FC = () => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -116,7 +116,6 @@ const Skills = () => {
       </div>
       <div className="additional-skills-description">
         <p>Additional Skills</p>
-
       </div>
       <div className="additional-skills">
         <Carousel responsive={responsive} infinite={true} showDots={true}>
