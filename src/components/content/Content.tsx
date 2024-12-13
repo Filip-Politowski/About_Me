@@ -3,9 +3,10 @@ import "./content.scss";
 
 import TypingEffect from "../typing-effect/TypingEffect";
 import Skills from "../skills/Skills";
-import profile from '../../assets/images/man.jpg'
+import profile from '../../assets/images/filip.jpeg'
+import Projects from "../projects/Projects";
 
-const Content = () => {
+const Content: React.FC = () => {
   return (
     <div className="content-container">
       <div className="welcome-container" id='welcome'>
@@ -26,6 +27,7 @@ const Content = () => {
           <p>List of Skills</p>
         </div>
         <Skills />
+        <Projects />
        
     </div>
   );
