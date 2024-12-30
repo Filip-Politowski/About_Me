@@ -5,6 +5,9 @@ import TypingEffect from "../typing-effect/TypingEffect";
 import Skills from "../skills/Skills";
 import profile from "../../assets/images/filip.jpeg";
 import Projects from "../projects/ProjectsGrid";
+import Experience from "../jobs/Experience";
+import Courses from "../courses/Courses";
+import Education from "../education/Education";
 
 const Content: React.FC = () => {
   return (
@@ -50,6 +53,20 @@ const Content: React.FC = () => {
               survived not only five centuries, but also the leap into</p>
       </div>
       <Projects />
+
+      <div className="chapter-description">
+        <p className="title courses-title">Courses</p>
+      </div>
+      <Courses />
+
+      <div className="chapter-description">
+        <p className="title experience-title">Experience</p>
+      </div>
+      <Experience />
+      <div className="chapter-description">
+        <p className="title education-title">Education</p>
+      </div>
+      <Education />
     </div>
   );
 };

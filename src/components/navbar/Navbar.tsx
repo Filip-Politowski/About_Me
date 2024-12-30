@@ -43,8 +43,9 @@ const Navbar: React.FC = () => {
         <h2 onClick={() => { handleMenuClick(); scrollToTarget('welcome'); }}>About Me</h2>
         <h2 onClick={() => { handleMenuClick(); scrollToTarget('skills'); }}>Skills</h2>
         <h2 onClick={() => { handleMenuClick(); scrollToTarget('projects'); }}>Projects</h2>
-        <h2 onClick={handleMenuClick}>Previous Jobs</h2>
-        <h2  onClick={() => { handleMenuClick(); }}>Education</h2>
+        <h2 onClick={() => { handleMenuClick(); scrollToTarget('courses'); }}>Courses</h2>
+        <h2 onClick={() => { handleMenuClick(); scrollToTarget('experience'); }}>Experience</h2>
+        <h2 onClick={() => { handleMenuClick(); scrollToTarget('education'); }}>Education</h2>
         <SquareButton text="Let's Connect" link="" />
       </div>
       <div

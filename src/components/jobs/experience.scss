@@ -1,0 +1,36 @@
+@import "../../assets/styles/globalVariables.scss";
+.job-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Courier New", Courier, monospace;
+  .job-information {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .job-information-fields {
+      .information-title {
+        font-weight: 800;
+        color: $gray-text-color;
+      }
+      font-family: "Courier New", Courier, monospace;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      .details {
+        font-weight: 500;
+        font-style: italic;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    hr {
+      width: 100%;
+    }
+  }
+  .job-description {
+    color: $gray-text-color;
+  }
+}

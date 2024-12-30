@@ -1,0 +1,29 @@
+@import  "../../assets/styles/globalVariables.scss";
+.education-container {
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap:3px;
+  font-family: "Courier New", Courier, monospace;
+  width: 100%;
+  .education-item{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    .sub-item{
+        font-weight: 800;
+        color:$gray-text-color;
+    }
+    .description{
+        font-weight: 500;
+        font-style: italic;
+        
+    }
+  }
+  p{
+    margin:0;
+  }
+  hr{
+    width: 100%;
+  }
+}

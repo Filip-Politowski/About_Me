@@ -44,6 +44,7 @@
         text-align: justify;
         margin-right: 5%;
         margin-left: 5%;
+        font-family: "Courier New", Courier, monospace;
       }
 
       @include xl {
@@ -86,7 +87,7 @@
     color: $gray-text-color;
     word-wrap: break-word; 
     overflow-wrap: anywhere; 
-    
+    font-family: "Courier New", Courier, monospace;
     text-align: justify;
     @include xl{
       margin-left: 5%;
