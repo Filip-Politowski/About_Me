@@ -131,6 +131,9 @@ const Skills: React.FC = () => {
           <div className="item">
             <h5 >Participation in the creation of projects</h5>
           </div >
+          <div className="item">
+            <h5 >English level B2</h5>
+          </div >
         </Carousel>
       </div>
     </div>

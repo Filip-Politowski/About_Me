@@ -26,7 +26,23 @@ const Experience = () => {
        
       </div>
       <div className="job-description">
-       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into</p>
+       <p>Creation of technical documentation
+• Creation of technical drawings and 3D models in
+Fusion 360
+• Development of prototype projects
+• Design of electrical diagrams in SEE Electrical
+• Selection of components for designed devices
+• Design and 3D printing of models
+• Preparation of project quotations
+• Implementation of projects in accordance with
+CE directives
+• Assembling designed devices
+• Participation in meetings with foreign
+contractors
+• Providing technical support to customers,
+including at automation fairs
+• Proficient in Fusion 360, SEE Electrical, Galileo,
+CODESYS, and PrusaSlicer</p>
       </div>
     </div>
   );

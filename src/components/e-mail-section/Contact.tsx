@@ -4,10 +4,10 @@ import "./contact.scss";
 
 const Contact = () => {
   return (
-    <div className="contact-container" id="contact">
+    <div className="contact-container" >
       <div className="contact-info-section">
         <div className="information-container">
-          <h3>Contact directly via:</h3>
+          <h3 id="contact">Contact directly via:</h3>
           <p>
             Phone No.: <strong>+48 785 106 215</strong>
           </p>
