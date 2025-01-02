@@ -14,7 +14,7 @@ const Contact = () => {
           <p>
             E-mail: <strong>fil.politowski@gmail.com</strong>
           </p>
-          {/* <img src={email} alt="email-icon" /> */}
+          
         </div>
       </div>
       <div className="form-section">
