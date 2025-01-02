@@ -1,4 +1,4 @@
-@import '../../assets/styles/globalVariables.scss';
+@import "../../assets/styles/globalVariables.scss";
 .navbar {
   position: sticky;
   top: 0;
@@ -10,8 +10,24 @@
   width: 100%;
 
   .firstname-lastname {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     color: white;
     margin-left: 15px;
+    gap: 10px;
+    @include xl {
+      font-size: 12px;
+      
+    }
+
+    
+    img {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
   }
 
   .navigation-buttons {
@@ -78,7 +94,7 @@
     }
   }
 
-  @media (max-width: 1170px) {
+  @media (max-width: 1500px) {
     .navigation-buttons {
       position: absolute;
       top: 0;
@@ -92,17 +108,34 @@
       align-items: center;
       gap: 10px;
       transition: left 0.3s ease-in-out;
-    
     }
 
     .navigation-buttons.open {
       left: 0;
     }
-
+  
     .hamburger-menu {
       display: flex;
     }
+  }
+  .language-switcher {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    padding: 10px 0;
 
-   
+    img {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
   }
 }
