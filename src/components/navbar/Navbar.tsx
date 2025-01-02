@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
         <h2 onClick={() => { handleMenuClick(); scrollToTarget('courses'); }}>Courses</h2>
         <h2 onClick={() => { handleMenuClick(); scrollToTarget('experience'); }}>Experience</h2>
         <h2 onClick={() => { handleMenuClick(); scrollToTarget('education'); }}>Education</h2>
-        <SquareButton text="Let's Connect" link="" />
+        <SquareButton text="Let's Connect" onClick={() => { handleMenuClick(); scrollToTarget('contact');}} />
       </div>
       <div
         className={`hamburger-menu ${isMenuOpen ? "open" : ""}`}

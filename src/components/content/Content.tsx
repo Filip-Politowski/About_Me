@@ -8,6 +8,7 @@ import Projects from "../projects/ProjectsGrid";
 import Experience from "../jobs/Experience";
 import Courses from "../courses/Courses";
 import Education from "../education/Education";
+import Contact from "../e-mail-section/Contact";
 
 const Content: React.FC = () => {
   return (
@@ -67,6 +68,10 @@ const Content: React.FC = () => {
         <p className="title education-title">Education</p>
       </div>
       <Education />
+      <div className="chapter-description">
+        <p className="title contact-title">Get In Touch</p>
+      </div>
+      <Contact />
     </div>
   );
 };

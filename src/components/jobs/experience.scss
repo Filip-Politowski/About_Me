@@ -10,6 +10,8 @@
     gap: 5px;
 
     .job-information-fields {
+      display: flex;
+      
       .information-title {
         font-weight: 800;
         color: $gray-text-color;
@@ -21,16 +23,36 @@
       .details {
         font-weight: 500;
         font-style: italic;
+        text-align: right;
+        
       }
       p {
         margin: 0;
       }
+      @include xl{
+        margin-left: 5%;
+        margin-right: 5%;
+        justify-content: space-between;
+      }
+    
     }
     hr {
       width: 100%;
+      @include xl{
+        width: 90%;
+      }
     }
+   
   }
   .job-description {
     color: $gray-text-color;
+    word-wrap: break-word; 
+    overflow-wrap: anywhere; 
+    text-align: justify;
+    @include xl{
+      margin-left: 5%;
+      margin-right: 5%;
+    }
   }
+  
 }
