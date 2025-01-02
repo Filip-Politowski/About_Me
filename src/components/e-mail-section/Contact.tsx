@@ -1,6 +1,6 @@
-import React from "react";
+
 import "./contact.scss";
-import email from "../../assets/images/email.svg";
+
 
 const Contact = () => {
   return (
