@@ -2,11 +2,14 @@ import { useState } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import "./contact.scss";
 import emailjs from "emailjs-com";
+import ok from "../../assets/images/ok.svg";
+import not_ok from "../../assets/images/not_ok.svg";
 
 const Contact = () => {
   const { language } = useLanguage();
-  const [modalVisible, setModalVisible] = useState(false);
-  const [modalMessage, setModalMessage] = useState("");
+  const [modalVisible, setModalVisible] = useState<boolean>(false);
+  const [modalMessage, setModalMessage] = useState<string>("");
+  const [imgOk, setImgOk] = useState<string>(ok)
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -25,6 +28,7 @@ const Contact = () => {
               ? "Email wysłany pomyślnie!"
               : "Email sent successfully!"
           );
+          setImgOk(ok);
           setModalVisible(true);
         },
         (error) => {
@@ -33,6 +37,7 @@ const Contact = () => {
               ? `Wysłanie emaila nie powiodło się: ${error.text}`
               : `Email sending failed: ${error.text}`
           );
+          setImgOk(not_ok)
           setModalVisible(true);
         }
       );
@@ -159,6 +164,7 @@ const Contact = () => {
         <div className="modal">
           <div className="modal-content">
             <p>{modalMessage}</p>
+            <img src={imgOk} alt="ok" />
             <button className="modal-button" onClick={closeModal}>
               OK
             </button>

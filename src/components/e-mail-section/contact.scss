@@ -165,11 +165,18 @@
 
 
 .modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: $navbar-color;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
   min-width: 300px;
+  img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 
@@ -182,6 +189,7 @@
   cursor: pointer;
   border-radius: 5px;
   font-family: "Courier New", Courier, monospace;
+  width: 100px;
 }
 
 .modal-button:hover {
