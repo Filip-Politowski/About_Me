@@ -147,4 +147,45 @@
       width: 100%;
     }
   }
+
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+
+.modal-content {
+  background-color: $navbar-color;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 300px;
+}
+
+
+.modal-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: $icons-buttons-background;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.modal-button:hover {
+  background-color: $icons-hover;
+}
+
 }

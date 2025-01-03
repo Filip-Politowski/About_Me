@@ -1,25 +1,46 @@
-
+import { useState } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import "./contact.scss";
 import emailjs from "emailjs-com";
+
 const Contact = () => {
   const { language } = useLanguage();
- 
-  
+  const [modalVisible, setModalVisible] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+
   const sendEmail = (e: any) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_b0a8dsa", "template_6h3p7dc", e.target,"8rV0UWR7gaEsObUTV")
+      .sendForm(
+        "service_b0a8dsa",
+        "template_6h3p7dc",
+        e.target,
+        "8rV0UWR7gaEsObUTV"
+      )
       .then(
         () => {
-          console.log("SUCCESS!");
+          setModalMessage(
+            language === "pl"
+              ? "Email wysłany pomyślnie!"
+              : "Email sent successfully!"
+          );
+          setModalVisible(true);
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          setModalMessage(
+            language === "pl"
+              ? `Wysłanie emaila nie powiodło się: ${error.text}`
+              : `Email sending failed: ${error.text}`
+          );
+          setModalVisible(true);
         }
       );
-      e.target.reset();
+    e.target.reset();
+  };
+
+  const closeModal = () => {
+    setModalVisible(false);
   };
 
   return (
@@ -83,7 +104,7 @@ const Contact = () => {
               />
             </div>
             <div className="item">
-              {language === " pl" ? (
+              {language === "pl" ? (
                 <label>Adres Email: </label>
               ) : (
                 <label>Email Address: </label>
@@ -133,6 +154,17 @@ const Contact = () => {
           </form>
         </div>
       </div>
+
+      {modalVisible && (
+        <div className="modal">
+          <div className="modal-content">
+            <p>{modalMessage}</p>
+            <button className="modal-button" onClick={closeModal}>
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
