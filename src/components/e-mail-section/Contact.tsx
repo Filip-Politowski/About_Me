@@ -3,7 +3,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import "./contact.scss";
 import emailjs from "emailjs-com";
 const Contact = () => {
-  const { language, setLanguage } = useLanguage();
+  const { language } = useLanguage();
  
   
   const sendEmail = (e: any) => {
