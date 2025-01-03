@@ -12,7 +12,7 @@ type Projects = {
 
 
 const Courses = () => {
-  const {language, setLanguage} = useLanguage();
+  const {language} = useLanguage();
 
   const coursestList: Projects[] = [
     { id: 1, title: "Java Developer", img: java_dev, description: language ==="pl" ? `Zakres: podstawy Java, programowanie obiektowe (OOP), bazy danych SQL, Servlety, JSP, podstawy JavaScript, Spring, Hibernate, Spring Boot, Rest API, własny projekt. ` : `Scope: basics of Java, OOP programming, SQL databases, Servlets, JSP, basics of

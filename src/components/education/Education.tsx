@@ -2,7 +2,7 @@ import React from "react";
 import "./education.scss";
 import { useLanguage } from "../contexts/LanguageContext";
 const Education = () => {
-  const { language, setLanguage } = useLanguage();
+  const { language } = useLanguage();
   return (
     <div className="education-container" id="education">
       <div className="education-item">

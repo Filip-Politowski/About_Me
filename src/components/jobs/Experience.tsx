@@ -3,7 +3,7 @@ import "./experience.scss";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const Experience = () => {
-  const { language, setLanguage } = useLanguage();
+  const { language} = useLanguage();
   return (
     <div className="job-container" id="experience">
       <div className="job-information">
