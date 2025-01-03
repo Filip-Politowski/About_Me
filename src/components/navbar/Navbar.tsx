@@ -5,16 +5,18 @@ import Github from "../socialButtons/github/Github";
 import SquareButton from "../squareButton/SquareButton";
 import pl_ln from "../../assets/images/pl.svg";
 import en_ln from "../../assets/images/en.svg";
+import { useLanguage } from "../contexts/LanguageContext"; // Import kontekstu
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("pl");
   const [isMobileView, setIsMobileView] = useState<boolean>(window.innerWidth <= 768);
+  const { language, setLanguage } = useLanguage(); 
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
+
   const handleResize = () => {
     setIsMobileView(window.innerWidth <= 1500);
   };
@@ -33,13 +35,13 @@ const Navbar: React.FC = () => {
     if (targetElement) {
       targetElement.scrollIntoView({
         behavior: "smooth",
-        block: "center", // Przewija do środka widocznej części strony
+        block: "center",
       });
     }
   }
 
-  const handleLanguageChange = (language: string) => {
-    setSelectedLanguage(language);
+  const handleLanguageChange = (lang: string) => {
+    setLanguage(lang); 
   };
 
   return (
@@ -50,20 +52,20 @@ const Navbar: React.FC = () => {
           <div className="language-switcher">
             <img
               src={en_ln}
-              alt=""
+              alt="English"
               onClick={() => handleLanguageChange("en")}
               style={
-                selectedLanguage === "pl"
+                language === "pl"
                   ? { filter: "grayscale(1)" }
                   : { filter: "none" }
               }
             />
             <img
               src={pl_ln}
-              alt=""
+              alt="Polish"
               onClick={() => handleLanguageChange("pl")}
               style={
-                selectedLanguage === "en"
+                language === "en"
                   ? { filter: "grayscale(1)" }
                   : { filter: "none" }
               }
@@ -86,7 +88,7 @@ const Navbar: React.FC = () => {
             scrollToTarget("welcome");
           }}
         >
-          About Me
+          {language === "pl" ? "O mnie" : "About Me"}
         </h2>
         <h2
           onClick={() => {
@@ -94,7 +96,7 @@ const Navbar: React.FC = () => {
             scrollToTarget("skills");
           }}
         >
-          Skills
+          {language === "pl" ? "Umiejętności" : "Skills"}
         </h2>
         <h2
           onClick={() => {
@@ -102,7 +104,7 @@ const Navbar: React.FC = () => {
             scrollToTarget("projects");
           }}
         >
-          Projects
+          {language === "pl" ? "Projekty" : "Projects"}
         </h2>
         <h2
           onClick={() => {
@@ -110,7 +112,7 @@ const Navbar: React.FC = () => {
             scrollToTarget("courses");
           }}
         >
-          Courses
+          {language === "pl" ? "Kursy" : "Courses"}
         </h2>
         <h2
           onClick={() => {
@@ -118,7 +120,7 @@ const Navbar: React.FC = () => {
             scrollToTarget("experience");
           }}
         >
-          Experience
+          {language === "pl" ? "Doświadczenie" : "Experience"}
         </h2>
         <h2
           onClick={() => {
@@ -126,10 +128,10 @@ const Navbar: React.FC = () => {
             scrollToTarget("education");
           }}
         >
-          Education
+          {language === "pl" ? "Edukacja" : "Education"}
         </h2>
         <SquareButton
-          text="Let's Connect"
+          text={language === "pl" ? "Skontaktuj się" : "Let's Connect"}
           onClick={() => {
             handleMenuClick();
             scrollToTarget("contact");
@@ -140,9 +142,12 @@ const Navbar: React.FC = () => {
             <img
               src={en_ln}
               alt="English"
-              onClick={() => handleLanguageChange("en")}
+              onClick={() => {
+                handleLanguageChange("en");
+                handleMenuClick();
+              }}
               style={
-                selectedLanguage === "pl"
+                language === "pl"
                   ? { filter: "grayscale(1)" }
                   : { filter: "none" }
               }
@@ -150,9 +155,12 @@ const Navbar: React.FC = () => {
             <img
               src={pl_ln}
               alt="Polish"
-              onClick={() => handleLanguageChange("pl")}
+              onClick={() => {
+                handleLanguageChange("pl");
+                handleMenuClick();
+              }}
               style={
-                selectedLanguage === "en"
+                language === "en"
                   ? { filter: "grayscale(1)" }
                   : { filter: "none" }
               }

@@ -19,6 +19,7 @@ import vscode from "../../assets/images/vscode.svg";
 import thymleaf from "../../assets/images/thymeleaf.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Skills: React.FC = () => {
   const responsive = {
@@ -45,10 +46,10 @@ const Skills: React.FC = () => {
     },
   };
 
- 
+  const { language } = useLanguage();
 
   return (
-    <div className="skills-container" id='skills'>
+    <div className="skills-container" id="skills">
       <div className="skills-list">
         <div className="skills-left">
           <p className="skills-header">Backend:</p>
@@ -62,7 +63,7 @@ const Skills: React.FC = () => {
               <p>Spring</p>
             </li>
             <li>
-              <img src={hibernate} alt="" /> <p>Hibernate</p> 
+              <img src={hibernate} alt="" /> <p>Hibernate</p>
             </li>
             <li>
               <img src={rest} alt="" /> <p>REST API</p>
@@ -77,7 +78,8 @@ const Skills: React.FC = () => {
               <img src={junit} alt="" /> <p>JUnit</p>
             </li>
             <li>
-              <img src={mysql} alt="" /><p>MySQL</p> 
+              <img src={mysql} alt="" />
+              <p>MySQL</p>
             </li>
             <li>
               <img src={postgresql} alt="" /> <p>Postgres</p>
@@ -86,7 +88,8 @@ const Skills: React.FC = () => {
               <img src={docker} alt="" /> <p>Docker</p>
             </li>
             <li>
-              <img src={git} alt="" /><p>Git</p>
+              <img src={git} alt="" />
+              <p>Git</p>
             </li>
           </ul>
         </div>
@@ -115,7 +118,11 @@ const Skills: React.FC = () => {
         </div>
       </div>
       <div className="additional-skills-description">
-        <p>Additional Skills</p>
+        {language === "pl" ? (
+          <p>Dodatkowe umiejętności</p>
+        ) : (
+          <p>Additional Skills</p>
+        )}
       </div>
       <div className="additional-skills">
         <Carousel responsive={responsive} infinite={true} showDots={true}>
@@ -123,17 +130,29 @@ const Skills: React.FC = () => {
             <h5>Windows/Linux</h5>
           </div>
           <div className="item">
-            <h5>Working with documentation</h5>
+            {language === "pl" ? (
+              <h5>Praca z dokumentacją</h5>
+            ) : (
+              <h5>Working with documentation</h5>
+            )}
           </div>
           <div className="item">
-            <h5>Teamwork</h5>
+            {language === "pl" ? <h5>Praca zespołowa</h5> : <h5>Teamwork</h5>}
           </div>
           <div className="item">
-            <h5 >Participation in the creation of projects</h5>
-          </div >
+            {language === "pl" ? (
+              <h5>Branie udziału w tworzeniu projektów</h5>
+            ) : (
+              <h5>Participation in the creation of projects</h5>
+            )}
+          </div>
           <div className="item">
-            <h5 >English level B2</h5>
-          </div >
+            {language === "pl" ? (
+              <h5>Poziom angielskiego B2</h5>
+            ) : (
+              <h5>English level B2</h5>
+            )}
+          </div>
         </Carousel>
       </div>
     </div>

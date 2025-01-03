@@ -3,6 +3,7 @@ import "./projects.scss";
 import java from "../../assets/images/java.svg";
 import react_img from "../../assets/images/react.svg";
 import Carousel from "react-multi-carousel";
+import { useLanguage } from "../contexts/LanguageContext";
 
 type Projects = {
   id: number;
@@ -13,38 +14,6 @@ type Projects = {
   img2?: string;
 };
 
-const projectsList: Projects[] = [
-  {
-    id: 1,
-    title: "Fines",
-    description: "Main technologies: Java/Thymleaf mandate addition project",
-    link: "https://github.com/Filip-Politowski/Fines_V2",
-    img: java,
-  },
-  {
-    id: 2,
-    title: "WealthVoyage",
-    description: "Main technologies: Java/React managing personal finances",
-    link: "https://github.com/Filip-Politowski/WealthVoyage",
-    img: java,
-    img2: react_img,
-  },
-  {
-    id: 3,
-    title: "ShopMateList",
-    description: "Main technologies: Java creation of shopping lists",
-    link: "https://github.com/Filip-Politowski/ShopeMateList",
-    img: java,
-  },
-  {
-    id: 4,
-    title: "AboutMePage",
-    description:
-      "Main technologies: React page with information about me for recruiters",
-    link: "https://github.com/Filip-Politowski/ShopeMateList",
-    img: react_img,
-  },
-];
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
@@ -70,7 +39,7 @@ const responsive = {
 
 const ProjectsGrid: React.FC = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
-
+  const { language } = useLanguage();
   const navigateToProject = (link: string) => {
     window.open(link);
   };
@@ -87,6 +56,50 @@ const ProjectsGrid: React.FC = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const projectsList: Projects[] = [
+    {
+      id: 1,
+      title: "Fines",
+      description:
+        language === "pl"
+          ? "Główne technologie: Java/Thymleaf; Projekt dodawania mandatów"
+          : "Main technologies: Java/Thymleaf; Mandate addition project",
+      link: "https://github.com/Filip-Politowski/Fines_V2",
+      img: java,
+    },
+    {
+      id: 2,
+      title: "WealthVoyage",
+      description:
+        language === "pl"
+          ? "Główne technologie: Java/React; Zarządzanie finansami osobistymi"
+          : "Main technologies: Java/React; Managing personal finances",
+      link: "https://github.com/Filip-Politowski/WealthVoyage",
+      img: java,
+      img2: react_img,
+    },
+    {
+      id: 3,
+      title: "ShopMateList",
+      description:
+        language === "pl"
+          ? "Główne technologie: Java; Tworzenie list zakupowych"
+          : "Main technologies: Java; Creation of shopping lists",
+      link: "https://github.com/Filip-Politowski/ShopeMateList",
+      img: java,
+    },
+    {
+      id: 4,
+      title: "AboutMePage",
+      description:
+        language === "pl"
+          ? "Główne technologie: React; Strona z informacjami o mnie dla rekruterów"
+          : "Main technologies: React; Page with information about me for recruiters",
+      link: "https://github.com/Filip-Politowski/ShopeMateList",
+      img: react_img,
+    },
+  ];
 
   return (
     <div className="projects-container" id="projects">
@@ -114,7 +127,10 @@ const ProjectsGrid: React.FC = () => {
               <div key={project.id} className="grid-item">
                 <img src={project.img} alt="" />
                 {project.img2 && <img src={react_img} alt="" />}
-                <div className="overlay"    onClick={() => navigateToProject(project.link)}>
+                <div
+                  className="overlay"
+                  onClick={() => navigateToProject(project.link)}
+                >
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                 </div>

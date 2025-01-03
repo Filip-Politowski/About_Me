@@ -7,6 +7,7 @@ import Content from "./components/content/Content";
 function App() {
   return (
     <div className="App">
+      
       <Navbar />
       <Content />
     </div>
