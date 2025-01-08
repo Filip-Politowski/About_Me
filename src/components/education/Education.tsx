@@ -34,7 +34,7 @@ const Education = () => {
       <div className="education-item">
         {language === "pl" ? (
           <>
-            <p className="sub-item">Stopeiń: </p>
+            <p className="sub-item">Stopień: </p>
             <p className="description">Studia dzienne II stopnia</p>
           </>
         ) : (

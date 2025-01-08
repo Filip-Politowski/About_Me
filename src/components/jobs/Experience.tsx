@@ -64,29 +64,43 @@ const Experience = () => {
       <div className="job-description">
         {language === "pl" ? (
           <p>
-            Creation of technical documentation • Creation of technical drawings
-            and 3D models in Fusion 360 • Development of prototype projects •
-            Design of electrical diagrams in SEE Electrical • Selection of
-            components for designed devices • Design and 3D printing of models •
-            Preparation of project quotations • Implementation of projects in
-            accordance with CE directives • Assembling designed devices •
-            Participation in meetings with foreign contractors • Providing
-            technical support to customers, including at automation fairs •
-            Proficient in Fusion 360, SEE Electrical, Galileo, CODESYS, and
-            PrusaSlicer asdasd
+            Na tym stanowisku byłem odpowiedzialny za projektowanie oraz wdrażanie projektów z dziedziny automatyki marketingowej, złożenie i podłączenie elektryczne finalnego produktu, oraz za prowadzenie pełnej dokumentacji projektowej.<br/>
+           <p className="highlighting">Stanowisko obejmowało następujący zakres obowiązków:</p> 
+            <ul>
+              <li>Tworzenie <span className="highlighting">dokumentacji</span> technicznej</li>
+              <li>Tworzenie <span className="highlighting">rysunków technicznych</span> i <span className="highlighting">modeli 3D</span> w programie Fusion 360</li>
+              <li><span className="highlighting">Tworzenie projektów prototypowych</span></li>
+              <li><span className="highlighting">Tworzenie schematów elektrycznych</span> w programie SEE Electrical</li>
+              <li>Dobór komponentów dla projektowanych urządzeń</li>
+              <li>Projektowanie oraz <span className="highlighting">druk modeli 3D</span></li>
+              <li>Tworzenie <span className="highlighting">wyceny</span> technicznej projektów</li>
+              <li>Implementacja tworzonych projektów zgodnie z dyrektywą CE</li>
+              <li>Montaż zaprojektowanych urządzeń</li>
+              <li>Lutowanie płytek PCB</li>
+              <li><span className="highlighting">Uczestniczenie w spotkaniach z zagranicznymi kontrahentami</span></li>
+              <li><span className="highlighting">Wsparcie techniczne klienta</span>, w tym na targach automatyki</li>
+              <li>Korzystanie z programów <span className="highlighting">Fusion 360</span>, <span className="highlighting">SEE Electrical</span>, <span className="highlighting">Galileo</span>, <span className="highlighting">CODESYS</span>, <span className="highlighting">PrusaSlicer</span></li>
+            </ul>
           </p>
         ) : (
           <p>
-            Creation of technical documentation • Creation of technical drawings
-            and 3D models in Fusion 360 • Development of prototype projects •
-            Design of electrical diagrams in SEE Electrical • Selection of
-            components for designed devices • Design and 3D printing of models •
-            Preparation of project quotations • Implementation of projects in
-            accordance with CE directives • Assembling designed devices •
-            Participation in meetings with foreign contractors • Providing
-            technical support to customers, including at automation fairs •
-            Proficient in Fusion 360, SEE Electrical, Galileo, CODESYS, and
-            PrusaSlicer
+          In this position, I was responsible for designing and implementing projects in the field of marketing automation, assembling and electrically connecting the final product, as well as maintaining complete project documentation.<br/>
+          <p className="highlighting">The position included the following responsibilities:</p>
+            <ul>
+              <li>Creating <span className="highlighting">technical documentation</span></li>
+              <li>Creating <span className="highlighting">technical drawings</span> and <span className="highlighting">3D models</span> in Fusion 360</li>
+              <li><span className="highlighting">Developing prototype projects</span></li>
+              <li><span className="highlighting">Designing electrical schematics</span> in SEE Electrical</li>
+              <li>Selecting components for designed devices</li>
+              <li>Designing and <span className="highlighting">3D printing models</span></li>
+              <li>Preparing <span className="highlighting">technical project cost estimates</span></li>
+              <li>Implementing designed projects in compliance with CE directives</li>
+              <li>Assembling the designed devices</li>
+              <li>Soldering PCB boards</li>
+              <li><span className="highlighting">Participating in meetings with international partners</span></li>
+              <li><span className="highlighting">Providing technical support to clients</span>, including at automation trade fairs</li>
+              <li>Using software such as <span className="highlighting">Fusion 360</span>, <span className="highlighting">SEE Electrical</span>, <span className="highlighting">Galileo</span>, <span className="highlighting">CODESYS</span>, and <span className="highlighting">PrusaSlicer</span></li>
+            </ul>
           </p>
         )}
       </div>

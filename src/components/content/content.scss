@@ -7,6 +7,12 @@
   flex-direction: column;
   align-items: center;
 
+
+  .highlighting{
+    color: white;
+  }
+
+
   .welcome-container {
     display: flex;
     flex-direction: row;
@@ -22,7 +28,7 @@
 
     .welcome-text-container {
       .welcome-header {
-        font-family: "Courier New", Courier, monospace; 
+        font-family: 'JetBrains Mono', monospace;
         height: 100px;
         margin-right: 5%;
         margin-left: 5%;
@@ -44,7 +50,7 @@
         text-align: justify;
         margin-right: 5%;
         margin-left: 5%;
-        font-family: "Courier New", Courier, monospace;
+        font-family: 'JetBrains Mono', monospace;
       }
 
       @include xl {
@@ -71,7 +77,7 @@
   }
 
   .title {
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 42px;
     margin-top:50px;
     color:white;
@@ -87,8 +93,10 @@
     color: $gray-text-color;
     word-wrap: break-word; 
     overflow-wrap: anywhere; 
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'JetBrains Mono', monospace;
     text-align: justify;
+
+
     @include xl{
       margin-left: 5%;
       margin-right: 5%;

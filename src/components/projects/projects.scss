@@ -4,7 +4,7 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "JetBrains Mono", monospace;
   .grid-container {
     display: flex;
     flex-wrap: wrap;
@@ -21,7 +21,11 @@
     max-width: calc(25% - 16px);
     min-width: 250px;
     position: relative;
-    background: linear-gradient(45deg, $icons-buttons-background, rgb(129, 129, 129));
+    background: linear-gradient(
+      45deg,
+      $icons-buttons-background,
+      rgb(129, 129, 129)
+    );
     height: 200px;
     border-radius: 8px;
     overflow: hidden;
@@ -39,7 +43,7 @@
       width: 300px;
       height: 150px;
     }
-    @include sm{
+    @include sm {
       width: 200px;
     }
   }
