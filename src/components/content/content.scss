@@ -45,9 +45,10 @@
       .welcome-text {
         color: $gray-text-color;
         word-wrap: break-word; 
-        overflow-wrap: anywhere; 
+        word-break: break-word;
         max-width: 100%; 
         text-align: justify;
+        hyphens: auto;
         margin-right: 5%;
         margin-left: 5%;
         font-family: 'JetBrains Mono', monospace;
